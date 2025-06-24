@@ -1,4 +1,4 @@
 # Revisão de Estruturas de dados
 
-Este repositório será como uma forma de revisão que farei/usarei reunindo ambas 
-as provas como estudo e revisão para a recuperação daqui 1 semana (27/06/2025)
+Este repositório é uma forma de revisão que estou utilizando reunindo ambas as Avaliações 
+em um só repositório como estudo e revisão para a recuperação da Avaliação 1 e 2.

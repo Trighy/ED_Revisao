@@ -70,6 +70,20 @@ public class Fila <T> {
         len++;
     }
 
+    public void adiciona_muitos(Fila<T> q2) {
+        // Nesse caso obti oque foi feito no "expande" e apenas invertir a posição do 'pos_orig' e 'nova', fazendo
+        // o pos_orig pegar oque está no nova e se adicionar...eu acho...
+        T[] pos_orig = (T[])new Object[2*area.length];
+
+        for (int j=0; j < len; j++) {
+            int fila2 = (j+inicio)%area.length;
+            pos_orig[j] = area[fila2];
+        }
+        area = pos_orig;
+        inicio = 0;
+        fim = len;
+    }
+
     public T remove() {
         // dispara IndexOutOfBoundsException
         // se fila vazia

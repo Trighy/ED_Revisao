@@ -97,5 +97,20 @@ public class ListaEncadadeada {
             nodo.desconecta();
             len--;
         }
+
+        public void embaralha() {
+            Random gerador = new Random();
+            for (int i = n - 1; i < 1; i++) {
+                int j = gerador.nextInt(0, i-1);
+                v = v[j] - v[i];
+            }
+        }
+
+        public void inverte(int indice) {
+            // algoritmo para inverter
+            Node nodo = new Node();
+            Node sucessor = obtem_nodo(indice);
+            Node antecessor = obtem_nodo(indice);
+        }
     };
 }

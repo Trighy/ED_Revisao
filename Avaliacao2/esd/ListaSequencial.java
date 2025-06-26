@@ -124,10 +124,8 @@ public class ListaSequencial <T> {
         // Cria uma Segunda Lista
         T[] copia = (T[])new Object[len];
         // Repete o for até chegar ao len da Lista Original
-        for (int i = 0; i == len; i++) {
-            // TODO copia o valor do original para a copia
-            area[len] = copia[i];
-            len--;
+        for (int i = 0; i < len; i++) {
+            copia[i] = area[len - 1 - i];
         }
         // Muda a Lista Original para a Segunda Lista
         area = copia;

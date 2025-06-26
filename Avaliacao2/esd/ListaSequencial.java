@@ -121,15 +121,15 @@ public class ListaSequencial <T> {
 
     @SuppressWarnings("unchecked")
     public void inverte() {
-        // Cria uma segunda Lista
-        T[] copia = (T[])new Object[defcap];
-        // o I deve pegar o tamanho do limite da lista, diminui a cada repetição e para quando o I em dobro fica
-        // menor do que o I do tamanho original, ou pelos era para fazer isso...
-        for (int i = defcap; (defcap*2) > i; i--) {
-            // copia o valor do original para a copia
-            copia[i] = area[i];
+        // Cria uma Segunda Lista
+        T[] copia = (T[])new Object[len];
+        // Repete o for até chegar ao len da Lista Original
+        for (int i = 0; i == len; i++) {
+            // TODO copia o valor do original para a copia
+            area[len] = copia[i];
+            len--;
         }
-        // muda a lista original
+        // Muda a Lista Original para a Segunda Lista
         area = copia;
     }
 

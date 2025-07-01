@@ -1,3 +1,4 @@
+import esd.Lista;
 import esd.ListaSequencial;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -13,12 +14,14 @@ public class Main {
         l.adiciona("tres");
         l.adiciona("quatro");
         l.adiciona("cinco");
+        l.adiciona("seis");
 
         for (int j=0; j < l.comprimento(); j++) {
             System.out.println(l.obtem(j));
         }
 
         l.inverte();
+        
         System.out.println("Após inverter: ");
         for (int j=0; j < l.comprimento(); j++) {
             System.out.println(l.obtem(j));

@@ -121,14 +121,26 @@ public class ListaSequencial <T> {
 
     @SuppressWarnings("unchecked")
     public void inverte() {
-        // Cria uma Segunda Lista
-        T[] copia = (T[])new Object[len];
         // Repete o for até chegar ao len da Lista Original
-        for (int i = 0; i < len; i++) {
-            copia[i] = area[len - 1 - i];
+        for (int i = 0; i < len/2; i++) {
+            T salva;
+
+            salva = area[i];
+            area[i] = area[len - 1 - i];
+            area[len - 1 - i] = salva;
         }
-        // Muda a Lista Original para a Segunda Lista
-        area = copia;
+    }
+
+    public void inverte2() {
+        // Repete o for até chegar ao len da Lista Original
+        int i=0, j=len-1;
+        for (; i < j; i++, j--) {
+            T salva;
+
+            salva = area[i];
+            area[i] = area[j];
+            area[j] = salva;
+        }
     }
 
     public int comprimento() {

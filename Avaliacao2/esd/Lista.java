@@ -124,7 +124,17 @@ public class Lista <T> {
     }
 
     public void inverte() {
-        // algoritmo para inverter
-
+        // Define-se o Node como Guarda para o começo da váriavel ser possível.
+        Node nodo = guarda;
+        do {
+            // Armazena-ze o valor do proximo nodo em uma váriavel Node sucessor para eventualmente percorrer a Lista.
+            Node sucessor = nodo.proximo;
+            // Armazena-ze o valor original do antecessor em uma váriavel Node temp para após inverter o valor entre o mesmo e proximo.
+            Node temp = nodo.antecessor;
+            nodo.antecessor = nodo.proximo;
+            nodo.proximo = temp;
+            // Define o Nodo anteriormente Guarda definido como Guarda, para o proximo, consequentemente permitindo repetição.
+            nodo = sucessor;
+        } while (nodo != guarda);
     }
 }
